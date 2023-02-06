@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-west-1"
 }
 
 resource "aws_security_group" "instance_security_group" {
@@ -24,7 +24,7 @@ resource "aws_subnet" "instance_subnet" {
 }
 
 resource "aws_instance" "instance" {
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-0b752bf1df193a6c4"
   instance_type = "t2.micro"
   count         = 2
 
@@ -42,7 +42,7 @@ resource "aws_instance" "instance" {
 
 resource "aws_elb" "instance_elb" {
   name               = "instance-elb"
-  availability_zones = ["us-west-2a", "us-west-2b"]
+  availability_zones = ["eu-west-1a", "eu-west-1b"]
 
   listener {
     instance_port     = 8080
