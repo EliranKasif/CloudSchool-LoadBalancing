@@ -8,7 +8,7 @@ apt-get install -y python3-venv git
 git clone https://github.com/EliranKasif/CloudSchool-LoadBalancing.git
 
 # Change to the repository directory
-cd <repository>
+cd CloudSchool-LoadBalancing
 
 # Create a virtual environment
 python3 -m venv venv
